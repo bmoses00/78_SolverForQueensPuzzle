@@ -56,22 +56,22 @@ public class SolverForQueensPuzzle {
         }
 
         if (inProgress.accept()) {
-
+            /*
             System.out.println( "  for debugging: base case detected for..."
                               + System.lineSeparator()
                               + inProgress
                               );
-
+                              */
             solutions.add(new BoardForQueensPuzzle(inProgress));
         }
 
         else if (!inProgress.lastIsNg()) {
-
+            /*
             System.out.println( "  for debugging: recursive case detected for..."
                               + System.lineSeparator()
                               + inProgress
                               );
-
+                              */
             for (int file = 0; file < inProgress.ranks(); file++) {
                 inProgress.populate(file);
                 recordSolutionsStarted();
